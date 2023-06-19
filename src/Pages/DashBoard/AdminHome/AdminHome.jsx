@@ -6,7 +6,7 @@ const AdminHome = () => {
     const { user } = useAuth();
 
     const { data: stats = [], refetch } = useQuery(['stats'], async () => {
-        const res = await fetch('http://localhost:5000/admin-status'); // Replace with the correct URL for fetching user data
+        const res = await fetch('https://summer-camp-school-server-tonmoy-org.vercel.app/admin-status'); // Replace with the correct URL for fetching user data
         return res.json();
     });
     

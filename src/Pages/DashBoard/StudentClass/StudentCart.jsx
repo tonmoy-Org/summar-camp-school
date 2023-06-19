@@ -38,7 +38,7 @@ const StudentCart = ({ select, refetch }) => {
     const handleSSLCommerz = (select) => {
         console.log(select);
         const data = { ...select, currency: 'BDT' }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://summer-camp-school-server-tonmoy-org.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
