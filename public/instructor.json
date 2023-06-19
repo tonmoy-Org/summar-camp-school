@@ -1,0 +1,52 @@
+[
+    {
+      "image": "https://i.ibb.co/NmgpH9P/violin.png",
+      "name": "Guitar Class",
+      "instructorName": "Sarah Thompson",
+      "availableSeats": 10,
+      "price": 25
+    },
+    {
+      "image": "https://i.ibb.co/wy88CDv/piano.png",
+      "name": "Piano Class",
+      "instructorName": "John Davis",
+      "availableSeats": 5,
+      "price": 30
+    },
+    {
+      "image": "https://i.ibb.co/kxTRf3x/bass-drum.png",
+      "name": "Drum Class",
+      "instructorName": "Maria Rodriguez",
+      "availableSeats": 15,
+      "price": 20
+    },
+    {
+      "image": "https://i.ibb.co/NmgpH9P/violin.png",
+      "name": "Violin Class",
+      "instructorName": "David Johnson",
+      "availableSeats": 8,
+      "price": 40
+    },
+    {
+      "image": "https://i.ibb.co/0Jc6GpG/saxophone.png",
+      "name": "Saxophone",
+      "instructorName": "Emily Wilson",
+      "availableSeats": 12,
+      "price": 15
+    },
+    {
+      "image": "https://i.ibb.co/ZcYwVYG/flute.png",
+      "name": "Flute Class",
+      "instructorName": "Michael Brown",
+      "availableSeats": 7,
+      "price": 35
+    },
+    {
+      "image": "https://i.ibb.co/NmgpH9P/violin.png",
+      "name": "Rock Music",
+      "instructorName": "Sarah Davis",
+      "availableSeats": 6,
+      "price": 28
+    }
+  ]
+  
