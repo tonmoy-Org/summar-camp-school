@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import logo from '../../../assets/logo/Logo-Musicine-1.png'
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
-import DarkModeToggle from 'react-dark-mode-toggle';
+import useAdmin from "../../../component/useAdmin";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-
+    const [ isAdmin ] = useAdmin();
     //  logOut
     const handleLogOut = () => {
         logOut()
@@ -26,7 +26,7 @@ const Navbar = () => {
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/instructors'>Instructors</Link></li>
                     <li><Link to='/allClass'>Classes</Link></li>
-                    <li><Link to='/dashboard'>Dashboard</Link></li>
+                    <li><Link to={isAdmin?.admin ? '/dashboard/adminHome' : '/dashboard'}>Dashboard</Link ></li>
                 </ul>
             </div>
 

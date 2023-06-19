@@ -13,7 +13,10 @@ const ManageClass = () => {
     }, [refetch]);
 //    console.log(classes)
     return (
-        <div>
+        <div className='w-full h-full p-8'>
+            <div>
+                <h2>Classes: {classes.length}</h2>
+                </div>
             <div>
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">

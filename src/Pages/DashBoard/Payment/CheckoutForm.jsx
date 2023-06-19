@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import './checkoutFrom.css'
-import useClass from "../../../hooks/useClass";
 
 const CheckoutForm = ({ price, selectClass }) => {
     const { user } = useContext(AuthContext);
@@ -12,7 +11,6 @@ const CheckoutForm = ({ price, selectClass }) => {
     const [clientSecret, setClientSecret] = useState(' ');
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
-    const [allClasses] = useClass();
 
   
     useEffect(() => {
@@ -107,7 +105,7 @@ const CheckoutForm = ({ price, selectClass }) => {
                     date: new Date(),
                     status: 'pending'
                 }
-                fetch('http://localhost:5000/payment', {
+                fetch('https://summer-camp-school-server-tonmoy-org.vercel.app/payment', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -121,7 +119,7 @@ const CheckoutForm = ({ price, selectClass }) => {
                             // display something
                         }
                     })
-                    fetch(`http://localhost:5000/class/${_id}`, {
+                    fetch(`https://summer-camp-school-server-tonmoy-org.vercel.app/class/${_id}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'

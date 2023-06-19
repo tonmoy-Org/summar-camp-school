@@ -19,6 +19,8 @@ import StudentClass from "../Pages/DashBoard/StudentClass/StudentClass";
 import Payment from "../Pages/DashBoard/Payment/Payment";
 import EnrolledClass from "../Pages/DashBoard/EnroledClass/EnrolledClass";
 import InstructorRoute from "./InstructorRoute";
+import AdminHome from "../Pages/DashBoard/AdminHome/AdminHome";
+import SSLCommerz from "../Pages/DashBoard/SSLCommerz/SSLCommerz";
 
 
   const router = createBrowserRouter([
@@ -55,6 +57,10 @@ import InstructorRoute from "./InstructorRoute";
       children: [
         //admin route
         {
+          path: 'adminHome',
+          element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+        },
+        {
           path: 'allUsers',
           element: <AdminRoute><ManageUser></ManageUser></AdminRoute>
         },
@@ -83,6 +89,10 @@ import InstructorRoute from "./InstructorRoute";
         {
           path: 'payment',
           element: <Payment></Payment>
+        },
+        {
+          path: 'SSLCommerz',
+          element: <SSLCommerz></SSLCommerz>
         }
       ]
     }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
 const StudentCart = ({ select, refetch }) => {
@@ -32,6 +33,25 @@ const StudentCart = ({ select, refetch }) => {
             }
         });
     }
+
+
+    const handleSSLCommerz = (select) => {
+        console.log(select);
+        const data = { ...select, currency: 'BDT' }
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                window.location.replace(data.url)
+            })
+
+    }
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
@@ -41,8 +61,11 @@ const StudentCart = ({ select, refetch }) => {
                     <p>Instructor: {instructorName}</p>
                     <p>Price: {price}</p>
                     <p>Available Seats: {availableSeats}</p>
-                    <div className="card-actions justify-end">                    
+                    <div className="card-actions justify-end">
                         <button onClick={() => handleDeleteClass(_id)} className="btn btn-sm btn-neutral">Delete</button>
+                        <Link>
+                            <button onClick={() => handleSSLCommerz(select)} className="btn btn-sm btn-neutral">SSLCommerz</button>
+                        </Link>
                     </div>
                 </div>
             </div>

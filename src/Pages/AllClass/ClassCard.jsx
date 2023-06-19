@@ -10,7 +10,7 @@ const ClassCard = ({ classes }) => {
 
   const handleSelect = (classes) => {
     console.log(classes);
-    const selectClass = { classId: _id, name, image, price, instructorName, availableSeats, enrolled, email: user.email };
+    const selectClass = { classId: _id, name, image, price, instructorName, availableSeats, enrolled, email: user?.email, userName: user?.displayName };
     setButtonDisabled(true); // Disable the button after it's clicked
 
     fetch('https://summer-camp-school-server-tonmoy-org.vercel.app/selectClass', {

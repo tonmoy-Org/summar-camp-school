@@ -25,6 +25,7 @@ const DashBoard = () => {
                         {/* Sidebar content here */}
                         {
                             isAdmin?.admin ? <>
+                                <li><Link to='/dashboard/adminHome'><FaHome></FaHome>Admin Home</Link></li>
                                 <li><Link to='/dashboard/manageClass' reload><AiFillAppstore></AiFillAppstore>Manage Classes</Link></li>
                                 <li><Link to='/dashboard/allUsers'><AiFillControl></AiFillControl>Manage Users</Link></li>
                                 <div className="divider"></div>
