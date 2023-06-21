@@ -18,7 +18,7 @@ const CheckoutForm = ({ price, selectClass }) => {
             // Create PaymentIntent as soon as the page loads
             const fetchClientSecret = async () => {
                 try {
-                    const response = await fetch("http://localhost:5000/create-payment-intent", {
+                    const response = await fetch("https://summer-camp-client-tonmoy-org.vercel.app/create-payment-intent", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -105,7 +105,7 @@ const CheckoutForm = ({ price, selectClass }) => {
                     date: new Date(),
                     status: 'pending'
                 }
-                fetch('http://localhost:5000/payment', {
+                fetch('https://summer-camp-client-tonmoy-org.vercel.app/payment', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -119,7 +119,7 @@ const CheckoutForm = ({ price, selectClass }) => {
                             // display something
                         }
                     })
-                    fetch(`http://localhost:5000/class/${_id}`, {
+                    fetch(`https://summer-camp-client-tonmoy-org.vercel.app/class/${_id}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'

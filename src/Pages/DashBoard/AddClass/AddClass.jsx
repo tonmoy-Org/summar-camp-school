@@ -13,7 +13,7 @@ const AddClass = () => {
         const addClass = { ...data, price, availableSeats, status: 'pending', enrolled: 0 }; // Add the price and availableSeats fields to the data object
 
         console.log(addClass);
-        fetch('http://localhost:5000/addClass', {
+        fetch('https://summer-camp-client-tonmoy-org.vercel.app/addClass', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

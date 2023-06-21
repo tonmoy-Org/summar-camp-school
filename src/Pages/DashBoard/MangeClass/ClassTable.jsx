@@ -9,7 +9,7 @@ const ClassTable = ({ addClass, index, refetch }) => {
     const [isDenied, setIsDenied] = useState(false);
 
     const handleApproved = id => {
-        fetch(`http://localhost:5000/addClass/${id}`, {
+        fetch(`https://summer-camp-client-tonmoy-org.vercel.app/addClass/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -25,7 +25,7 @@ const ClassTable = ({ addClass, index, refetch }) => {
                     setIsDenied(true);
                     setUpdateStatus('approved');
                     if (status === 'pending') {
-                        fetch('http://localhost:5000/class', {
+                        fetch('https://summer-camp-client-tonmoy-org.vercel.app/class', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -48,7 +48,7 @@ const ClassTable = ({ addClass, index, refetch }) => {
     };
 
     const handleDeny = id => {
-        fetch(`http://localhost:5000/addClass/${id}`, {
+        fetch(`https://summer-camp-client-tonmoy-org.vercel.app/addClass/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -84,7 +84,7 @@ const ClassTable = ({ addClass, index, refetch }) => {
         const feedback = {
             feedback: text,
         }
-        fetch(`http://localhost:5000/addClass/${id}`, {
+        fetch(`https://summer-camp-client-tonmoy-org.vercel.app/addClass/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
