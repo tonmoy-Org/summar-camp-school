@@ -12,7 +12,7 @@ const EnrolledClass = () => {
         ["enrolledClass", sortField, sortOrder],
         async () => {
             const res = await fetch(
-                `https://summer-camp-school-server-tonmoy-org.vercel.app/enrolledClass/sort?email=${user?.email}&sortField=${sortField}&sortOrder=${sortOrder}`
+                `http://localhost:5000/enrolledClass/sort?email=${user?.email}&sortField=${sortField}&sortOrder=${sortOrder}`
             );
             return res.json();
         }

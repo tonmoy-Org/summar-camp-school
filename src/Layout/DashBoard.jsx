@@ -9,7 +9,7 @@ import { ImBook } from "react-icons/im";
 const DashBoard = () => {
     const [isAdmin] = useAdmin();
     const [isInstructor, isInstructorLoading] = useInstructor();
-    
+    // const isAdmin = true;
     return (
         <div>
             <div className="drawer lg:drawer-open">

@@ -8,7 +8,7 @@ const useAdmin = () => {
         queryKey: ['isAdmin', user?.email],
         enabled: !loading,
         queryFn: async () => {
-            const res = await fetch(`https://summer-camp-school-server-tonmoy-org.vercel.app/users/admin/${user?.email}`); // Replace with the correct URL for fetching user data
+            const res = await fetch(`http://localhost:5000/users/admin/${user?.email}`); // Replace with the correct URL for fetching user data
             return res.json();
         }
     })

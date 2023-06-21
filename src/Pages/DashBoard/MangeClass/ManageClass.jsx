@@ -4,7 +4,7 @@ import ClassTable from './ClassTable';
 
 const ManageClass = () => {
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
-        const res = await fetch('https://summer-camp-school-server-tonmoy-org.vercel.app/addClass');
+        const res = await fetch('http://localhost:5000/addClass');
         return res.json();
     });
 

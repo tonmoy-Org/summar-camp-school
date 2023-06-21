@@ -13,7 +13,7 @@ const ClassCard = ({ classes }) => {
     const selectClass = { classId: _id, name, image, price, instructorName, availableSeats, enrolled, email: user?.email, userName: user?.displayName };
     setButtonDisabled(true); // Disable the button after it's clicked
 
-    fetch('https://summer-camp-school-server-tonmoy-org.vercel.app/selectClass', {
+    fetch('http://localhost:5000/selectClass', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -34,7 +34,7 @@ const ClassCard = ({ classes }) => {
   return (
     <div className="card w-96 glass">
       <figure>
-        <img className="p-8" src={image} alt={name} />
+        <img className="" src={image} alt={name} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>

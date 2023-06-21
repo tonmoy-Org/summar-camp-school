@@ -15,7 +15,7 @@ const StudentCart = ({ select, refetch }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://summer-camp-school-server-tonmoy-org.vercel.app/selectClass/${id}`, {
+                fetch(`http://localhost:5000/selectClass/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -34,24 +34,6 @@ const StudentCart = ({ select, refetch }) => {
         });
     }
 
-
-    const handleSSLCommerz = (select) => {
-        console.log(select);
-        const data = { ...select, currency: 'BDT' }
-        fetch('https://summer-camp-school-server-tonmoy-org.vercel.app/orders', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                window.location.replace(data.url)
-            })
-
-    }
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
@@ -63,9 +45,6 @@ const StudentCart = ({ select, refetch }) => {
                     <p>Available Seats: {availableSeats}</p>
                     <div className="card-actions justify-end">
                         <button onClick={() => handleDeleteClass(_id)} className="btn btn-sm btn-neutral">Delete</button>
-                        <Link>
-                            <button onClick={() => handleSSLCommerz(select)} className="btn btn-sm btn-neutral">SSLCommerz</button>
-                        </Link>
                     </div>
                 </div>
             </div>

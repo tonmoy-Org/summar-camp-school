@@ -20,7 +20,7 @@ import Payment from "../Pages/DashBoard/Payment/Payment";
 import EnrolledClass from "../Pages/DashBoard/EnroledClass/EnrolledClass";
 import InstructorRoute from "./InstructorRoute";
 import AdminHome from "../Pages/DashBoard/AdminHome/AdminHome";
-import SSLCommerz from "../Pages/DashBoard/SSLCommerz/SSLCommerz";
+
 
 
   const router = createBrowserRouter([
@@ -89,11 +89,7 @@ import SSLCommerz from "../Pages/DashBoard/SSLCommerz/SSLCommerz";
         {
           path: 'payment',
           element: <Payment></Payment>
-        },
-        {
-          path: 'SSLCommerz',
-          element: <SSLCommerz></SSLCommerz>
-        }
+        }    
       ]
     }
   ]);

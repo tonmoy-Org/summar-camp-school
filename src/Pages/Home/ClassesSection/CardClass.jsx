@@ -4,10 +4,10 @@ const CardClass = ({ item }) => {
     const { name, image, price, instructorName, availableSeats, enrolled } = item;
     return (
         <div  data-aos="fade-up">
-            {enrolled !== 0 &&
+            {enrolled > 1 &&
                 <div className="card w-96 glass">
                     <figure>
-                        <img className="p-8" src={image} alt={name} />
+                        <img className="" src={image} alt={name} />
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">{name}</h2>
