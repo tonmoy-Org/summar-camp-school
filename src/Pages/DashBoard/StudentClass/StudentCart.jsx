@@ -45,6 +45,9 @@ const StudentCart = ({ select, refetch }) => {
                     <p>Available Seats: {availableSeats}</p>
                     <div className="card-actions justify-end">
                         <button onClick={() => handleDeleteClass(_id)} className="btn btn-sm btn-neutral">Delete</button>
+                        <Link to={`/dashboard/payment`}>
+                            <button className="btn btn-sm btn-neutral">Buy Now</button>
+                        </Link>
                     </div>
                 </div>
             </div>

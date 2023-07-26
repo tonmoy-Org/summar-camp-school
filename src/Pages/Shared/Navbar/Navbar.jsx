@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from '../../../assets/logo/Logo-Musicine-1.png'
+import logo from '../../../assets/logo/music-player.png'
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import useAdmin from "../../../component/useAdmin";
@@ -32,9 +32,12 @@ const Navbar = () => {
         document.querySelector("html").setAttribute("data-theme", localTheme);
     }, [theme])
     return (
-        <div className="navbar fixed z-10 bg-opacity-30 bg-black h-0 text-white px-10">
+        <div className="navbar px-10 fixed z-10  bg-slate-600 text-white h-0">
             <div className="flex gap-2 items-center">
-                <Link to='/'><img className="w-52 rounded-md" src={logo} alt="" /></Link>
+                <Link className="btn btn-ghost normal-case text-xl">
+                    <img className="w-10" src={logo} alt="" />
+                    <p>Musicine</p>
+                </Link>
             </div>
             <div className="navbar hidden lg:flex justify-center">
                 <ul className="px-4 gap-10 font-semibold">
@@ -45,7 +48,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="flex-none mx-auto ms-36">
+            <div className="flex-none mx-auto ms-36 text-black font-semibold">
 
                 {user &&
                     <div className="dropdown dropdown-end">
@@ -57,7 +60,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </label>
-                        <ul tabIndex={0} className="menu menu-compact dropdown-content  mt-3  p-1   font-semibold shadow bg-[#D99904] rounded-box">
+                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-72">
                             <li>
                                 <p className="justify-between">
                                     {user.displayName} <br />

@@ -13,12 +13,6 @@ const StudentClass = () => {
     return (
         <div className="w-9/12 mx-auto lg:h-full">
             <SectionTitle subHeading='Selected Class Information' heading='Classes'></SectionTitle>
-            <div className="py-5 justify-end flex gap-8">
-                <Link to={`/dashboard/payment`}>
-                    <button className="btn btn-sm btn-neutral">Buy Now</button>
-                </Link>
-               
-            </div>
             {selectClass?.length === 0 ? 
             <span className="text-2xl">Currently you have not select any class</span>
                 : <div className="grid lg:grid-cols-2 gap-8">
