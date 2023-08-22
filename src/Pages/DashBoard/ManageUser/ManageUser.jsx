@@ -3,14 +3,17 @@ import { useQuery } from "@tanstack/react-query";
 
 const ManageUser = () => {
     const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await fetch('https://summer-camp-client-tonmoy-org.vercel.app/users'); // Replace with the correct URL for fetching user data
+        const res = await fetch('http://localhost:5000/users'); // Replace with the correct URL for fetching user data
         return res.json();
     });
 
     
     return (
-        <div>
-            <div>User: {users?.length}</div>
+        <div className="w-80 lg:w-10/12 mx-auto lg:p-3 mt-6 mb-12">
+            <div className="bg-base-200 p-3">
+                <h1 className="text-xl font-bold">User Details</h1>
+                <p>Total user: <span className="font-bold">{users?.length}</span></p>
+            </div>
             <div>
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
@@ -23,7 +26,7 @@ const ManageUser = () => {
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="bg-base-200">
                             {users?.map((user, index) =>
                                 <UserTable
                                     key={user._id}

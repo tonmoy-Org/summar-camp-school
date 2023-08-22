@@ -4,19 +4,20 @@ import ClassTable from './ClassTable';
 
 const ManageClass = () => {
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
-        const res = await fetch('https://summer-camp-client-tonmoy-org.vercel.app/addClass');
+        const res = await fetch('http://localhost:5000/addClass');
         return res.json();
     });
 
     useEffect(() => {
         refetch();
     }, [refetch]);
-//    console.log(classes)
+    //    console.log(classes)
     return (
-        <div className='w-full h-full p-8'>
-            <div>
-                <h2>Classes: {classes.length}</h2>
-                </div>
+        <div className="w-80 lg:w-11/12 mx-auto lg:p-3 mt-6 mb-12">
+            <div className="bg-base-200 p-3">
+                <h1 className="text-xl font-bold">Classes Details</h1>
+                <p>Total class: <span className="font-bold">{classes?.length}</span></p>
+            </div>
             <div>
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
@@ -32,7 +33,7 @@ const ManageClass = () => {
                                 <th className="text-center">Status</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className='bg-base-200'>
                             {classes?.map((addClass, index) => (
                                 <ClassTable
                                     key={addClass._id}

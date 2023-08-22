@@ -1,22 +1,23 @@
 import { Link, Outlet } from "react-router-dom";
 import useAdmin from "../component/useAdmin";
 import useInstructor from "../component/useInstructor";
-import { FaHome} from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import { BsCartDash } from "react-icons/bs";
-import { AiFillCheckSquare, AiFillControl,AiFillAppstore ,AiFillPlusCircle} from "react-icons/ai";
+import { AiFillCheckSquare, AiFillControl, AiFillAppstore, AiFillPlusCircle } from "react-icons/ai";
 import { ImBook } from "react-icons/im";
+import DashboardNavbar from "../Pages/Shared/Navbar/DashboardNavbar";
 
 const DashBoard = () => {
     const [isAdmin] = useAdmin();
     const [isInstructor, isInstructorLoading] = useInstructor();
-    // const isAdmin = true;
     return (
         <div>
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
+                <div className="drawer-content">
                     {/* Page content here */}
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                    <DashboardNavbar></DashboardNavbar>
+                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden ms-5 mt-4">Dashboard Menu</label>
                     <Outlet></Outlet>
                 </div>
                 <div className="drawer-side">
@@ -30,6 +31,8 @@ const DashBoard = () => {
                                 <li><Link to='/dashboard/allUsers'><AiFillControl></AiFillControl>Manage Users</Link></li>
                                 <div className="divider"></div>
                                 <li><Link to='/'><FaHome></FaHome>Home</Link></li>
+                                <li><Link to='/instructors'>Instructors</Link></li>
+                                <li><Link to='/allClass'>Classes</Link></li>
                             </>
                                 : <>
 
@@ -43,16 +46,20 @@ const DashBoard = () => {
                                 <li><Link to='/dashboard/myClass'><ImBook></ImBook>My Class</Link></li>
                                 <div className="divider"></div>
                                 <li><Link to='/'><FaHome></FaHome>Home</Link></li>
+                                <li><Link to='/instructors'>Instructors</Link></li>
+                                <li><Link to='/allClass'>Classes</Link></li>       
                             </> : <>
 
                             </>
                         }
-                        {isAdmin?.admin || isInstructor?.instructor || isInstructorLoading  ?  <> </> : 
+                        {isAdmin?.admin || isInstructor?.instructor || isInstructorLoading ? <> </> :
                             <>
                                 <li><Link to='/dashboard/studentClass'><BsCartDash></BsCartDash>My Selected Classes</Link></li>
                                 <li><Link to='/dashboard/enrolledClass'><AiFillCheckSquare></AiFillCheckSquare>My Enrolled Classes</Link></li>
                                 <div className="divider"></div>
                                 <li><Link to='/'><FaHome></FaHome>Home</Link></li>
+                                <li><Link to='/instructors'>Instructors</Link></li>
+                                <li><Link to='/allClass'>Classes</Link></li>
                             </>
                         }
                     </ul>

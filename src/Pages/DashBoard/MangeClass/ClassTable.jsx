@@ -3,13 +3,13 @@ import Swal from 'sweetalert2'
 
 
 const ClassTable = ({ addClass, index, refetch }) => {
-    const { image, className, email, instructorName, seats, price, } = addClass;
+    const { image, name, email, instructorName, seats, price, } = addClass;
     const [status, setUpdateStatus] = useState(addClass.status);
     const [isApproved, setIsApproved] = useState(false);
     const [isDenied, setIsDenied] = useState(false);
 
     const handleApproved = id => {
-        fetch(`https://summer-camp-client-tonmoy-org.vercel.app/addClass/${id}`, {
+        fetch(`http://localhost:5000/addClass/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -25,7 +25,7 @@ const ClassTable = ({ addClass, index, refetch }) => {
                     setIsDenied(true);
                     setUpdateStatus('approved');
                     if (status === 'pending') {
-                        fetch('https://summer-camp-client-tonmoy-org.vercel.app/class', {
+                        fetch('http://localhost:5000/class', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -48,7 +48,7 @@ const ClassTable = ({ addClass, index, refetch }) => {
     };
 
     const handleDeny = id => {
-        fetch(`https://summer-camp-client-tonmoy-org.vercel.app/addClass/${id}`, {
+        fetch(`http://localhost:5000/addClass/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -84,7 +84,7 @@ const ClassTable = ({ addClass, index, refetch }) => {
         const feedback = {
             feedback: text,
         }
-        fetch(`https://summer-camp-client-tonmoy-org.vercel.app/addClass/${id}`, {
+        fetch(`http://localhost:5000/addClass/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -115,12 +115,12 @@ const ClassTable = ({ addClass, index, refetch }) => {
                     </div>
                 </div>
             </td>
-            <td>{className}</td>
+            <td>{name}</td>
             <td>{instructorName}</td>
             <td>{email}</td>
             <td>{seats}</td>
             <td>{price}</td>
-            <th>
+            <th className="lg:flex items-center justify-center">
                 {status === 'approved' ? <span className="text-green-600 mx-3"> approved</span>
                     : <><button disabled={isApproved} onClick={() => handleApproved(addClass._id)} className="btn btn-ghost btn-xs">pending</button></>}
 

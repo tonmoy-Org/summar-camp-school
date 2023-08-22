@@ -32,7 +32,7 @@ const Navbar = () => {
         document.querySelector("html").setAttribute("data-theme", localTheme);
     }, [theme])
     return (
-        <div className="navbar px-10 fixed z-10  bg-slate-600 text-white h-0">
+        <div className="navbar px-10 fixed z-10  bg-[#5b626b] text-white h-0">
             <div className="flex gap-2 items-center">
                 <Link className="btn btn-ghost normal-case text-xl">
                     <img className="w-10" src={logo} alt="" />
@@ -71,7 +71,7 @@ const Navbar = () => {
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/instructors'>Instructors</Link></li>
                             <li><Link to='/allClass'>Classes</Link></li>
-                            <li><Link to='/dashboard'>Dashboard</Link></li>
+                            <li><Link to={isAdmin?.admin ? '/dashboard/adminHome' : '/dashboard'}>Dashboard</Link ></li>
                             <li><Link onClick={handleLogOut}>Logout</Link></li>
                         </ul>
                     </div>

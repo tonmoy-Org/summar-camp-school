@@ -20,6 +20,7 @@ import Payment from "../Pages/DashBoard/Payment/Payment";
 import EnrolledClass from "../Pages/DashBoard/EnroledClass/EnrolledClass";
 import InstructorRoute from "./InstructorRoute";
 import AdminHome from "../Pages/DashBoard/AdminHome/AdminHome";
+import RecentPayment from "../Pages/DashBoard/RecentPayment/RecentPayment";
 
 
 
@@ -59,6 +60,10 @@ import AdminHome from "../Pages/DashBoard/AdminHome/AdminHome";
         {
           path: 'adminHome',
           element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+        },
+        {
+          path: 'recent-pay',
+          element: <AdminRoute><RecentPayment></RecentPayment></AdminRoute>
         },
         {
           path: 'allUsers',

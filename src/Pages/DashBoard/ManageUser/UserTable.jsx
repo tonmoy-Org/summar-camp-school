@@ -6,7 +6,7 @@ const UserTable = ({ user, index, refetch }) => {
 
     const handleMakeAdmin = (user) => {
         console.log(user);
-        fetch(`https://summer-camp-client-tonmoy-org.vercel.app/users/admin/${user._id}`, {
+        fetch(`http://localhost:5000/users/admin/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -27,7 +27,7 @@ const UserTable = ({ user, index, refetch }) => {
 
     const handleMakeInstructor = (user) => {
         console.log(user);
-        fetch(`https://summer-camp-client-tonmoy-org.vercel.app/users/instructor/${user._id}`, {
+        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())

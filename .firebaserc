@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "musicine-39b16"
-  }
+    "default": "musicine-org",
+    "y": "musicine-org"
+  },
+  "targets": {},
+  "etags": {}
 }
