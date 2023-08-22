@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const useClass = () => {
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
-        const res = await fetch(`http://localhost:5000/class`); // Replace with the correct URL for fetching user data
+        const res = await fetch(`https://summer-camp-client.vercel.app/class`); // Replace with the correct URL for fetching user data
         return res.json();
     });
 

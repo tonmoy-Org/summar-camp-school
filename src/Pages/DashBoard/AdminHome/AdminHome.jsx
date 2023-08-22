@@ -6,7 +6,7 @@ import RecentPayment from "../RecentPayment/RecentPayment";
 const AdminHome = () => {
     const { user } = useAuth();
     const { data: stats = [] } = useQuery(['stats'], async () => {
-        const res = await fetch('http://localhost:5000/admin-status'); // Replace with the correct URL for fetching user data
+        const res = await fetch('https://summer-camp-client.vercel.app/admin-status'); // Replace with the correct URL for fetching user data
         return res.json();
     });
     console.log(stats)

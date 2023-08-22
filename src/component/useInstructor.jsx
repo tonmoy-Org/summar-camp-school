@@ -8,7 +8,7 @@ const useInstructor = () => {
         queryKey: ['isInstructor', user?.email],
         enabled: !loading,
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/users/instructor/${user?.email}`); // Replace with the correct URL for fetching user data
+            const res = await fetch(`https://summer-camp-client.vercel.app/users/instructor/${user?.email}`); // Replace with the correct URL for fetching user data
             return res.json();
         }
     })

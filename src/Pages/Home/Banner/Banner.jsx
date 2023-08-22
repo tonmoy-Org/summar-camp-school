@@ -12,7 +12,7 @@ import slider3 from '../../../assets/banner/slider-3.jpg'
 
 const Banner = () => {
     return (
-        <div>
+        <div className="pt-10">
             <Swiper
                 cssMode={true}
                 navigation={true}

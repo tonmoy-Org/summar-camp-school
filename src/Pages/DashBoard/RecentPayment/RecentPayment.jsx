@@ -3,6 +3,7 @@ import RecentPaymentTable from "./RecentPaymentTable";
 
 const RecentPayment = () => {
     const [enrolledClass] = useEnrolledClass();
+    const slicedEnrolledClass = enrolledClass.slice(0, 3);
     return (
         <div>
             <table className="table">
@@ -18,7 +19,7 @@ const RecentPayment = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {enrolledClass.map((enrolledItem, index) => (
+                    {slicedEnrolledClass.map((enrolledItem, index) => (
                         <RecentPaymentTable
                             key={enrolledItem._id}
                             enrolledItem={enrolledItem}

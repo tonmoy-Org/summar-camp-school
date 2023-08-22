@@ -13,7 +13,7 @@ const ClassCard = ({ classes }) => {
     const selectClass = { classId: _id, name, image, price, instructorName, availableSeats, enrolled, email: user?.email, userName: user?.displayName };
     setButtonDisabled(true); // Disable the button after it's clicked
 
-    fetch('http://localhost:5000/selectClass', {
+    fetch('https://summer-camp-client.vercel.app/selectClass', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
