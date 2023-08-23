@@ -8,7 +8,7 @@ const AllClass = () => {
     return (
         <div className="max-w-screen-xl mx-auto py-28">
             <SectionTitle subHeading='OUR CLASS' heading='Our Music Class'></SectionTitle>
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:w-11/12 grid lg:grid-cols-3 gap-6 mx-auto">
                 {
                     allClasses.map(classes =>
                         <ClassCard

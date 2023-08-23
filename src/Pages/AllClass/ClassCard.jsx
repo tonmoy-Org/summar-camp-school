@@ -32,7 +32,7 @@ const ClassCard = ({ classes }) => {
   };
 
   return (
-    <div className="card w-96 glass">
+    <div className="w-96 bg-base-100 shadow-xl">
       <figure>
         <img className="" src={image} alt={name} />
       </figure>
@@ -43,8 +43,8 @@ const ClassCard = ({ classes }) => {
         <p>Available Seats: {availableSeats}</p>
         <p>Enrolled: {enrolled}</p>
         <div className="card-actions justify-end">
-          {user === null ?  <Link to='/login'><button className="btn btn-primary">Selected</button> </Link>:
-            <button className="btn btn-primary" onClick={() => handleSelect(classes)} disabled={isButtonDisabled}>
+          {user === null ? <Link to='/login'><button className="btn btn-sm btn-primary">Selected</button> </Link> :
+            <button className="btn btn-sm btn-primary" onClick={() => handleSelect(classes)} disabled={isButtonDisabled}>
               {isButtonDisabled ? 'Selected' : 'Select'}
             </button>
           }
