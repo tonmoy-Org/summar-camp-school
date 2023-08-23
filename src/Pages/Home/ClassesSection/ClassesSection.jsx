@@ -9,13 +9,13 @@ const ClassesSection = () => {
   const slicedClasses = classes.slice(0, 6);
 
   return (
-    <div className="mt-16" >
+    <div className="mt-16 bg-[#F4F4EC] lg:px-20 lg:pb-10">
       <SectionTitle
         subHeading="OUR CLASS"
         heading="Popular Classes"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       ></SectionTitle>
-      <div className="grid lg:grid-cols-3 gap-8  mb-28">
+      <div className="grid lg:grid-cols-4 gap-8 mx-auto">
         {slicedClasses.map((item) => (
           <CardClass key={item._id} item={item}></CardClass>
         ))}

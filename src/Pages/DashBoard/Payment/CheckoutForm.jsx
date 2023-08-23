@@ -140,7 +140,7 @@ const CheckoutForm = ({ price, selectClass }) => {
     };
 
     return (
-        <div>
+        <div className="mx-2">
             <form id="paymentForm" onSubmit={handleSubmit}>
                 <CardElement
                     options={{

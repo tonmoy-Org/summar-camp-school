@@ -1,21 +1,21 @@
 import SectionTitle from "../../../component/SectionTitle";
 import StudentCart from "./StudentCart";
 import useSelectedClasses from "../../../hooks/useSelectedClasses";
-import { Link } from "react-router-dom";
+
 
 const StudentClass = () => {
     const [selectClass, refetch] = useSelectedClasses();
 
-    const handleSSLCommerz = (selectClass) =>{
-        console.log(selectClass);
+    // const handleSSLCommerz = (selectClass) =>{
+    //     console.log(selectClass);
 
-    }
+    // }
     return (
-        <div className="w-9/12 mx-auto lg:h-full">
+        <div>
             <SectionTitle subHeading='Selected Class Information' heading='Classes'></SectionTitle>
             {selectClass?.length === 0 ? 
             <span className="text-2xl">Currently you have not select any class</span>
-                : <div className="grid lg:grid-cols-2 gap-8">
+                : <div className="grid lg:grid-cols-3 gap-6 w-11/12 mx-auto">
                     {
                         selectClass.map(select =>
                             <StudentCart

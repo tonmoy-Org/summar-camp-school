@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
 const StudentCart = ({ select, refetch }) => {
-    const { _id, name, image, price, instructorName, availableSeats } = select;
+    const { _id, name, image, price, availableSeats } = select;
 
     const handleDeleteClass = id => {
         Swal.fire({
@@ -36,17 +36,16 @@ const StudentCart = ({ select, refetch }) => {
 
     return (
         <div>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src={image} /></figure>
+            <div className="card h-52 card-side bg-base-100 shadow-xl">
+                <figure><img className="h-full w-52" src={image} /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">{name}</h2>
-                    <p>Instructor: {instructorName}</p>
+                    <h2 className="text-[16px] font-bold">{name}</h2>
                     <p>Price: {price}</p>
                     <p>Available Seats: {availableSeats}</p>
-                    <div className="card-actions justify-end">
+                    <div className="flex justify-between gap-4 items-center">
                         <button onClick={() => handleDeleteClass(_id)} className="btn btn-sm btn-neutral">Delete</button>
                         <Link to={`/dashboard/payment`}>
-                            <button className="btn btn-sm btn-neutral">Buy Now</button>
+                            <button className="btn btn-sm btn-error text-white">Pay</button>
                         </Link>
                     </div>
                 </div>
