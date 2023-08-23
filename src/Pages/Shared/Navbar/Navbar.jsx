@@ -31,8 +31,10 @@ const Navbar = () => {
         const localTheme = localStorage.getItem("theme");
         document.querySelector("html").setAttribute("data-theme", localTheme);
     }, [theme])
+
+
     return (
-        <div className="navbar px-10 fixed z-10  bg-[#5b626b] text-white h-0">
+        <div className="navbar lg:px-10 bg-[#F4F4EC] h-0 pe-6">
             <div className="flex gap-2 items-center">
                 <Link className="btn btn-ghost normal-case text-xl">
                     <img className="w-10" src={logo} alt="" />

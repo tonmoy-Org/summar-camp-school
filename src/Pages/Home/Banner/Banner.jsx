@@ -1,29 +1,43 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+// import required modules
+import { Autoplay } from 'swiper';
+
 import slider1 from '../../../assets/banner/slider-1.jpg'
 import slider2 from '../../../assets/banner/slider-2.jpg'
 import slider3 from '../../../assets/banner/slider-3.jpg'
+import slider4 from '../../../assets/banner/slider-4.jpg'
+import slider5 from '../../../assets/banner/slider-5.jpg'
+import slider6 from '../../../assets/banner/slider-6.jpg'
+import slider7 from '../../../assets/banner/slider-7.jpg'
+import slider8 from '../../../assets/banner/slider-8.jpg'
+import Count from './Count';
+
 
 const Banner = () => {
     return (
-        <div className="pt-10">
+        <div>
             <Swiper
-                cssMode={true}
+                slidesPerView={1}
+                spaceBetween={30}
+                loop={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 navigation={true}
-                pagination={true}
-                mousewheel={true}
-                keyboard={true}
-                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                modules={[Autoplay]}
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img className="brightness-75" src={slider1} alt="" />
+                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider5} alt="" />
+                    <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
                         <p className="md:w-2/3">
@@ -34,29 +48,91 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="brightness-75" src={slider2} alt="" />
+                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider6} alt="" />
+                    <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
                         <p className="md:w-2/3">
-                            TERRA STRING QUARTET
-                            Tuesday | October 3, 2023 | 2 pm</p>
+                            SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
+                            Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
                         <button className="btn">info & Tickets</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="brightness-75" src={slider3} alt="" />
+                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider2} alt="" />
+                    <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
                         <p className="md:w-2/3">
-                            NADIA AND LILI BOULANGER & THE BOULANGERIE
-                            Monday | December 11, 2023 | 7:30 pm</p>
+                            SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
+                            Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
                         <button className="btn">info & Tickets</button>
                     </div>
                 </SwiperSlide>
-
+                <SwiperSlide>
+                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider4} alt="" />
+                    <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
+                    <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
+                        <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
+                        <p className="md:w-2/3">
+                            SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
+                            Sunday | June 11, 2023 | 6:30 pm</p>
+                        <br />
+                        <button className="btn">info & Tickets</button>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider1} alt="" />
+                    <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
+                    <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
+                        <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
+                        <p className="md:w-2/3">
+                            SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
+                            Sunday | June 11, 2023 | 6:30 pm</p>
+                        <br />
+                        <button className="btn">info & Tickets</button>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider3} alt="" />
+                    <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
+                    <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
+                        <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
+                        <p className="md:w-2/3">
+                            SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
+                            Sunday | June 11, 2023 | 6:30 pm</p>
+                        <br />
+                        <button className="btn">info & Tickets</button>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider8} alt="" />
+                    <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
+                    <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
+                        <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
+                        <p className="md:w-2/3">
+                            SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
+                            Sunday | June 11, 2023 | 6:30 pm</p>
+                        <br />
+                        <button className="btn">info & Tickets</button>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider7} alt="" />
+                    <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
+                    <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
+                        <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
+                        <p className="md:w-2/3">
+                            SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
+                            Sunday | June 11, 2023 | 6:30 pm</p>
+                        <br />
+                        <button className="btn">info & Tickets</button>
+                    </div>
+                </SwiperSlide>
             </Swiper>
+            <Count></Count>
         </div>
     );
 };
