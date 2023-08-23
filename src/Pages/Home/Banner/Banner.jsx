@@ -22,7 +22,7 @@ import Count from './Count';
 
 const Banner = () => {
     return (
-        <div>
+        <div className='pt-10'>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -32,7 +32,7 @@ const Banner = () => {
                     disableOnInteraction: false,
                 }}
                 navigation={true}
-                modules={[Autoplay]}
+                modules={[]}
                 className="mySwiper"
             >
                 <SwiperSlide>

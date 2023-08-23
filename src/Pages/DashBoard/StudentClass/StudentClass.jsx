@@ -10,6 +10,7 @@ const StudentClass = () => {
     //     console.log(selectClass);
 
     // }
+    refetch();
     return (
         <div>
             <SectionTitle subHeading='Selected Class Information' heading='Classes'></SectionTitle>
