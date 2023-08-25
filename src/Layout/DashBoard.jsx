@@ -3,9 +3,11 @@ import useAdmin from "../component/useAdmin";
 import useInstructor from "../component/useInstructor";
 import { FaHome } from 'react-icons/fa';
 import { BsCartDash } from "react-icons/bs";
-import { AiFillCheckSquare, AiFillControl, AiFillAppstore, AiFillPlusCircle } from "react-icons/ai";
+import { AiFillCheckSquare, AiFillControl, AiFillAppstore, AiFillPlusCircle, AiOutlineHome } from "react-icons/ai";
 import { ImBook } from "react-icons/im";
 import DashboardNavbar from "../Pages/Shared/Navbar/DashboardNavbar";
+import { RxAvatar } from "react-icons/rx";
+import { BiBookReader } from "react-icons/bi";
 
 const DashBoard = () => {
     const [isAdmin] = useAdmin();
@@ -17,7 +19,7 @@ const DashBoard = () => {
                 <div className="drawer-content">
                     {/* Page content here */}
                     <DashboardNavbar></DashboardNavbar>
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden ms-5 mt-4">Dashboard Menu</label>
+                    <label htmlFor="my-drawer-2" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  drawer-button bg-[#626dd4b5] text-white lg:hidden ms-5 mt-4">Dashboard Menu</label>
                     <Outlet></Outlet>
                 </div>
                 <div className="drawer-side">
@@ -30,9 +32,9 @@ const DashBoard = () => {
                                 <li><Link to='/dashboard/manageClass' reload><AiFillAppstore></AiFillAppstore>Manage Classes</Link></li>
                                 <li><Link to='/dashboard/allUsers'><AiFillControl></AiFillControl>Manage Users</Link></li>
                                 <div className="divider"></div>
-                                <li><Link to='/'><FaHome></FaHome>Home</Link></li>
-                                <li><Link to='/instructors'>Instructors</Link></li>
-                                <li><Link to='/allClass'>Classes</Link></li>
+                                <li><Link to='/'><AiOutlineHome></AiOutlineHome>Home</Link></li>
+                                <li><Link to='/instructors'><RxAvatar></RxAvatar>Instructors</Link></li>
+                                <li><Link to='/allClass'><BiBookReader></BiBookReader>Classes</Link></li>
                             </>
                                 : <>
 
@@ -45,9 +47,9 @@ const DashBoard = () => {
                                 <li ><Link to='/dashboard/addClass'><AiFillPlusCircle></AiFillPlusCircle>Add a Class</Link></li>
                                 <li><Link to='/dashboard/myClass'><ImBook></ImBook>My Class</Link></li>
                                 <div className="divider"></div>
-                                <li><Link to='/'><FaHome></FaHome>Home</Link></li>
-                                <li><Link to='/instructors'>Instructors</Link></li>
-                                <li><Link to='/allClass'>Classes</Link></li>       
+                                <li><Link to='/'><AiOutlineHome></AiOutlineHome>Home</Link></li>
+                                <li><Link to='/instructors'><RxAvatar></RxAvatar>Instructors</Link></li>
+                                <li><Link to='/allClass'><BiBookReader></BiBookReader>Classes</Link></li>
                             </> : <>
 
                             </>
@@ -57,9 +59,9 @@ const DashBoard = () => {
                                 <li><Link to='/dashboard/studentClass'><BsCartDash></BsCartDash>My Selected Classes</Link></li>
                                 <li><Link to='/dashboard/enrolledClass'><AiFillCheckSquare></AiFillCheckSquare>My Enrolled Classes</Link></li>
                                 <div className="divider"></div>
-                                <li><Link to='/'><FaHome></FaHome>Home</Link></li>
-                                <li><Link to='/instructors'>Instructors</Link></li>
-                                <li><Link to='/allClass'>Classes</Link></li>
+                                <li><Link to='/'><AiOutlineHome></AiOutlineHome>Home</Link></li>
+                                <li><Link to='/instructors'><RxAvatar></RxAvatar>Instructors</Link></li>
+                                <li><Link to='/allClass'><BiBookReader></BiBookReader>Classes</Link></li>
                             </>
                         }
                     </ul>

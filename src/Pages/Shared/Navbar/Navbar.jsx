@@ -54,7 +54,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="flex-none mx-auto lg:ps-36 ps-20 text-black font-semibold">
+            <div className="flex-none mx-auto   text-black font-semibold">
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle">
                         <div className="indicator">
@@ -63,7 +63,7 @@ const Navbar = () => {
                             
                         </div>
                     </label>
-                    <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+                    <div tabIndex={0} className="mt-3 p-2 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
                         <div className="card-body">
                             <span className="font-bold text-lg">{selectClass?.length} Items</span>
                             <span className="text-info">Subtotal: ${subTotal}</span>
@@ -75,7 +75,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 {user &&
-                    <div className="dropdown dropdown-end">
+                    <div className="dropdown dropdown-end ps-4">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <div>
@@ -84,7 +84,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </label>
-                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-72">
+                        <ul tabIndex={0} className="mt-3 z-[1] shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-72">
                             <li>
                                 <p className="justify-between">
                                     {user.displayName} <br />
@@ -108,7 +108,7 @@ const Navbar = () => {
                     : <Link className="btn btn-xs font-bold" to='/login'>LogIn</Link>
             }
 
-            <div className="ms-3">
+            <div className="lg:ms-3">
                 <label className="swap swap-rotate">
 
                     {/* this hidden checkbox controls the state */}
