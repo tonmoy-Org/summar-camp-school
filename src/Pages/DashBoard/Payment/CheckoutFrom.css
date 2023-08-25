@@ -106,4 +106,7 @@ button:disabled {
         width: 80vw;
         min-width: initial;
     }
+    #paymentForm{
+        min-width: 350px;
+    }
 }

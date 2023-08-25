@@ -4,7 +4,7 @@ const Count = () => {
     return (
         <div>
             <div className='flex justify-end lg:me-28 lg:mb-32 text-center'>
-                <div className='lg:flex justify-center absolute z-[1] lg:-translate-y-16 -translate-y-28 pe-6'>
+                <div className='lg:flex justify-center absolute z-[1] lg:-translate-y-16 -translate-y-28 pe-11'>
                     <div className='bg-[#F6ECE9] py-4 lg:py-8' data-aos="fade-up"
                         data-aos-duration="1000">
                         <CountUp
