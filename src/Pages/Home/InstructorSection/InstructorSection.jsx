@@ -9,7 +9,7 @@ const InstructorSection = () => {
   return (
     <div className='lg:mx-1 mx-6 py-28'>
       <SectionTitle subHeading='OUR TEACHERS' heading='Popular Instructors ' />
-      <div className='grid lg:grid-cols-4 gap-5'>
+      <div className='grid lg:grid-cols-4 gap-6'>
         {slicedInstructors.map(instructor => (
           <InstructorSectionCard
             key={instructor._id}

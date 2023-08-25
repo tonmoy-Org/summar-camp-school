@@ -32,7 +32,7 @@ const ClassCard = ({ classes }) => {
   };
 
   return (
-    <div className="w-96 bg-base-100 shadow-xl">
+    <div className="lg:w-[370px] w-80 mx-auto bg-base-100 shadow-xl">
       <figure>
         <img src={image} alt={name} />
       </figure>

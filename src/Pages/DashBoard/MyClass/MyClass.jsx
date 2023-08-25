@@ -14,9 +14,9 @@ const MyClass = () => {
     }, [user])
     console.log('class', classes);
     return (
-        <div>
+        <div className="pb-10">
             <SectionTitle heading='My class' ></SectionTitle>
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-3 mx-10 gap-8">
                 {
                     classes.map(myClass =>
                         <MyClassCard

@@ -5,7 +5,7 @@ const MyClassCard = ({ myClass }) => {
     console.log(feedback)
     return (
         <div>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card card-compact w-80 lg:w-[350px] mx-auto bg-base-100 shadow-xl">
                 <figure><img src={image}/></figure>
                 <div className="card-body">
                     <h2 className="card-title">{className}</h2>
