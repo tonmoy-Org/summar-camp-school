@@ -79,13 +79,13 @@ const SignUp = () => {
 
     return (
         <div>
-            <div className="hero  min-h-[110vh] bg-base-200">
-                <div className="hero-content">
-                    <div className="card lg:w-[450px] flex-shrink-0 max-w-xl shadow-2xl bg-base-100">
+            <div className="hero  min-h-[110vh] bg-base-200 pt-20">
+                <div className="hero-content p-0">
+                    <div className="card lg:w-[450px] flex-shrink-0 max-w-xl shadow-2xl bg-base-100 w-11/12">
                         <div className="card-body">
                             <h1 className="text-3xl font-bold text-center">Sign Up</h1>
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <div className="form-control">
+                                <div className="form-control w-11/12 lg:w-full">
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
@@ -98,7 +98,7 @@ const SignUp = () => {
                                     />
                                     {errors.name && <span className="text-red-600">This field is required</span>}
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control w-11/12 lg:w-full">
                                     <label className="label">
                                         <span className="label-text">Photo Url</span>
                                     </label>
@@ -111,7 +111,7 @@ const SignUp = () => {
                                     />
                                     {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control w-11/12 lg:w-full">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
@@ -124,7 +124,7 @@ const SignUp = () => {
                                     />
                                     {errors.email && <span className="text-red-600">This field is required</span>}
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control w-11/12 lg:w-full">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                         <small className="text-blue-600" onClick={() => setShow(!show)}>
@@ -140,7 +140,7 @@ const SignUp = () => {
                                     />
                                     {errors.password && <span className="text-red-600">This field is required</span>}
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control w-11/12 lg:w-full">
                                     <label className="label">
                                         <span className="label-text">Confirm Password</span>
                                     </label>
@@ -153,7 +153,7 @@ const SignUp = () => {
                                     />
                                     {errors.confirmPassword && <span className="text-red-600">This field is required</span>}
                                 </div>
-                                <div className="form-control mt-6">
+                                <div className="form-control mt-6 w-11/12 lg:w-full">
                                     <input className="btn btn-success text-white" type="submit" value="SignUp" />
                                 </div>
                             </form>

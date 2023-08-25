@@ -6,7 +6,7 @@ import SocialLogIn from "../Shared/SocialLogIn/SocialLogIn";
 
 
 const LogIn = () => {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { register, handleSubmit,formState: { errors } } = useForm();
     const { signIn } = useContext(AuthContext);
     const [show, setShow] = useState(false);
     const [error, setError] = useState('');
@@ -35,9 +35,8 @@ const LogIn = () => {
             })
     }
     return (
-        <div className="hero min-h-[100vh] bg-base-200">
-            <div className="hero-content flex-col lg:w-6/12">
-
+        <div className="hero min-h-[100vh] bg-base-200 pt-16">
+            <div className="hero-content flex-col lg:w-6/12 p-0 w-10/12">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
                         <div className="text-center">
@@ -45,14 +44,14 @@ const LogIn = () => {
                         </div>
                         <form onSubmit={handleSubmit(onSubmit)}>
 
-                            <div className="form-control">
+                            <div className="form-control w-10/12 lg:w-full">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered" />
                                 {errors.email && <span className="text-red-600">This field is required</span>}
                             </div>
-                            <div className="form-control">
+                            <div className="form-control w-10/12 lg:w-full">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                     <small className='text-blue-600' onClick={() => setShow(!show)}>
@@ -69,7 +68,7 @@ const LogIn = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
+                            <div className="form-control w-10/12 lg:w-full mt-6">
                                 <input className="btn btn-success text-white" type="submit" value="SignUp" />
                             </div>
                         </form>

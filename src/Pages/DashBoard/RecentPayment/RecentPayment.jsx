@@ -5,7 +5,7 @@ const RecentPayment = () => {
     const [enrolledClass] = useEnrolledClass();
     const slicedEnrolledClass = enrolledClass.slice(0, 3);
     return (
-        <div>
+        <div className="w-80 lg:w-10/12 mx-auto lg:p-3 mt-6 mb-12 overflow-x-auto">
             <table className="table">
                 <thead>
                     <tr>

@@ -38,7 +38,7 @@ const Navbar = () => {
     const subTotal = total.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
     refetch();
     return (
-        <div className="navbar fixed z-10 lg:px-10 bg-[#F4F4EC] h-0 pe-6">
+        <div className="navbar fixed z-10 lg:px-10 bg-[#F4F4EC] h-0 pe-5">
             <div className="flex gap-2 items-center">
                 <Link className="btn btn-ghost normal-case text-xl">
                     <img className="w-10" src={logo} alt="" />
@@ -54,7 +54,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="flex-none mx-auto ms-36 text-black font-semibold">
+            <div className="flex-none mx-auto lg:ps-36 ps-20 text-black font-semibold">
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle">
                         <div className="indicator">
