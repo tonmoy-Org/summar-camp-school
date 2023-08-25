@@ -31,7 +31,7 @@ const EnrolledClass = () => {
     };
 
     return (
-        <div className="w-9/12 mx-auto lg:h-full">
+        <div className="w-10/12 mx-auto lg:h-full">
             <SectionTitle subHeading="Enrolled Class" heading="My Enrolled Class" />
             <div className="mb-4 my-10">
                 <label className="mr-2 text-xl font-medium">Sort By:</label>
@@ -48,7 +48,7 @@ const EnrolledClass = () => {
                     </option>
                 </select>
             </div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto w-80">
                 <table className="table">
                     <thead>
                         <tr>

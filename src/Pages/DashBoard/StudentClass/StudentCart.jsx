@@ -36,7 +36,7 @@ const StudentCart = ({ select, refetch }) => {
 
     return (
         <div>
-            <div className="card h-52 card-side bg-base-100 shadow-xl">
+            <div className="card w-80 lg:w-full mx-auto h-52 card-side bg-base-100 shadow-xl">
                 <figure><img className="h-full w-52" src={image} /></figure>
                 <div className="card-body">
                     <h2 className="text-[16px] font-bold">{name}</h2>
