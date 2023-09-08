@@ -32,7 +32,7 @@ const Banner = () => {
                     disableOnInteraction: false,
                 }}
                 navigation={true}
-                modules={[]}
+                modules={[Autoplay]}
                 className="mySwiper"
             >
                 <SwiperSlide>
