@@ -24,11 +24,11 @@ const Banner = () => {
     return (
         <div className='pt-10'>
             <Swiper
-                slidesPerView={1}
                 spaceBetween={30}
+                centeredSlides={true}
                 loop={true}
                 autoplay={{
-                    delay: 2500,
+                    delay: 8000,
                     disableOnInteraction: false,
                 }}
                 navigation={true}
