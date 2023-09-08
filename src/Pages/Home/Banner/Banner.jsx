@@ -32,11 +32,11 @@ const Banner = () => {
                     disableOnInteraction: false,
                 }}
                 navigation={true}
-                modules={[Autoplay]}
+                modules={[]}
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider5} alt="" />
+                    <img className='w-full lg:h-[690px] h-96 brightness-75' src={slider5} alt="" />
                     <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
@@ -48,7 +48,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider6} alt="" />
+                    <img className='w-full lg:h-[690px] h-96 brightness-75' src={slider6} alt="" />
                     <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
@@ -60,7 +60,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider2} alt="" />
+                    <img className='w-full lg:h-[690px] h-96 brightness-75' src={slider2} alt="" />
                     <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
@@ -72,7 +72,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider4} alt="" />
+                    <img className='w-full lg:h-[690px] h-96 brightness-75' src={slider4} alt="" />
                     <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
@@ -84,7 +84,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider1} alt="" />
+                    <img className='w-full lg:h-[690px] h-96 brightness-75' src={slider1} alt="" />
                     <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
@@ -96,7 +96,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider3} alt="" />
+                    <img className='w-full lg:h-[690px] h-96 brightness-75' src={slider3} alt="" />
                     <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
@@ -108,7 +108,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider8} alt="" />
+                    <img className='w-full lg:h-[690px] h-96 brightness-75' src={slider8} alt="" />
                     <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
@@ -120,7 +120,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full lg:h-[660px] h-96 brightness-75' src={slider7} alt="" />
+                    <img className='w-full lg:h-[690px] h-96 brightness-75' src={slider7} alt="" />
                     <h2 className="lg:hidden absolute bottom-44 left-6 text-white text-xl font-bold">Learn The Music From The Masters</h2>
                     <div className="px-32 space-y-4 lg:visible invisible absolute bottom-28 text-white">
                         <h1 className="text-3xl">KAUFMAN MUSIC CENTER PRESENTS</h1>
