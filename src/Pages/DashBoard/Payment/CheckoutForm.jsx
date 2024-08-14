@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { AuthContext } from "../../../Provider/AuthProvider";
-import './checkoutFrom.css'
+
 
 const CheckoutForm = ({ price, selectClass }) => {
     const { user } = useContext(AuthContext);
