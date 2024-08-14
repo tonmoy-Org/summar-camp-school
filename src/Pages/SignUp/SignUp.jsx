@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
-import SocialLogIn from "../Shared/SocialLogIn/SocialLogIn";
 
 const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -43,7 +42,7 @@ const SignUp = () => {
                         updateUserProfile(data.name, data.photoURL)
                             .then(() => {
                                 const saveUser = { name: data.name, email: data.email };
-                                fetch("https://summer-camp-client.vercel.app/users", {
+                                fetch("https://summer-camp-server-sandy-phi.vercel.app/users", {
                                     method: "POST",
                                     headers: {
                                         "content-type": "application/json",
@@ -79,54 +78,41 @@ const SignUp = () => {
 
     return (
         <div>
-            <div className="hero  min-h-[110vh] bg-base-200 pt-20">
-                <div className="hero-content p-0">
-                    <div className="card lg:w-[450px] flex-shrink-0 max-w-xl shadow-2xl bg-base-100 w-11/12">
+            <div className="lg:hero lg:min-h-screen pt-20">
+                <div className="lg:hero-content">
+                    <div className="card lg:w-[500px] flex-shrink-0 max-w-xl lg:shadow-2xl rounded-none bg-base-100">
                         <div className="card-body">
-                            <h1 className="text-3xl font-bold text-center">Sign Up</h1>
+                            <h1 className="text-3xl font-bold">Register Now</h1>
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <div className="form-control w-11/12 lg:w-full">
+                                <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Name</span>
+                                        <span className="label-text font-semibold">Name</span>
                                     </label>
                                     <input
                                         type="text"
                                         {...register("name", { required: true })}
                                         name="name"
-                                        placeholder="name"
-                                        className="input input-bordered"
+                                        placeholder="Enter name"
+                                        className="p-2 border-2 border-base-300"
                                     />
                                     {errors.name && <span className="text-red-600">This field is required</span>}
                                 </div>
-                                <div className="form-control w-11/12 lg:w-full">
+                                <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Photo Url</span>
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        {...register("photoURL", { required: true })}
-                                        placeholder="Photo URL"
-                                        className="input input-bordered"
-                                    />
-                                    {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}
-                                </div>
-                                <div className="form-control w-11/12 lg:w-full">
-                                    <label className="label">
-                                        <span className="label-text">Email</span>
+                                        <span className="label-text font-semibold">Email</span>
                                     </label>
                                     <input
                                         type="email"
                                         {...register("email", { required: true })}
                                         name="email"
-                                        placeholder="email"
-                                        className="input input-bordered"
+                                        placeholder="Enter email"
+                                        className="p-2 border-2 border-base-300"
                                     />
                                     {errors.email && <span className="text-red-600">This field is required</span>}
                                 </div>
-                                <div className="form-control w-11/12 lg:w-full">
+                                <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Password</span>
+                                        <span className="label-text font-semibold">Password</span>
                                         <small className="text-blue-600" onClick={() => setShow(!show)}>
                                             {show ? <span>Hide</span> : <span>Show</span>}
                                         </small>
@@ -135,30 +121,30 @@ const SignUp = () => {
                                         type={show ? "text" : "password"}
                                         {...register("password", { required: true })}
                                         name="password"
-                                        placeholder="password"
-                                        className="input input-bordered"
+                                        placeholder="Enter password"
+                                        className="p-2 border-2 border-base-300"
                                     />
                                     {errors.password && <span className="text-red-600">This field is required</span>}
                                 </div>
-                                <div className="form-control w-11/12 lg:w-full">
+                                <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Confirm Password</span>
+                                        <span className="label-text font-semibold">Confirm Password</span>
                                     </label>
                                     <input
                                         type={show ? "text" : "password"}
                                         {...register("confirmPassword", { required: true })}
                                         name="confirmPassword"
-                                        placeholder="confirm password"
-                                        className="input input-bordered"
+                                        placeholder="Confirm password"
+                                        className="p-2 border-2 border-base-300"
                                     />
                                     {errors.confirmPassword && <span className="text-red-600">This field is required</span>}
                                 </div>
-                                <div className="form-control mt-6 w-11/12 lg:w-full">
-                                    <input className="btn btn-success text-white" type="submit" value="SignUp" />
+                                <div className="form-control mt-6">
+                                    <input className="btn btn-success text-white rounded-none" type="submit" value="Sign up" />
                                 </div>
                             </form>
                             <div className="py-3">
-                                <SocialLogIn></SocialLogIn>
+
                             </div>
                             <div>
                                 <p>

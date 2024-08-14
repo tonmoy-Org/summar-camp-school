@@ -1,10 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
+import useAxios from "./useAxios";
 
 
 const useInstructorLoader = () => {
-    const { data: instructors = [], refetch } = useQuery(['instructors'], async () => {
-        const res = await fetch(`https://summer-camp-client.vercel.app/instructors`); // Replace with the correct URL for fetching user data
-        return res.json();
+    const [axiosSecure] = useAxios();
+    const { data: instructors = [], refetch } = useQuery({
+        queryKey: ['instructors'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/instructors');
+            return res.data;
+        },
     });
 
     return [instructors, refetch];

@@ -12,13 +12,13 @@ const CheckoutForm = ({ price, selectClass }) => {
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
 
-  
+
     useEffect(() => {
         if (price > 0) {
             // Create PaymentIntent as soon as the page loads
             const fetchClientSecret = async () => {
                 try {
-                    const response = await fetch("https://summer-camp-client.vercel.app/create-payment-intent", {
+                    const response = await fetch("https://summer-camp-server-sandy-phi.vercel.app/create-payment-intent", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -93,7 +93,7 @@ const CheckoutForm = ({ price, selectClass }) => {
                 console.log(restSeats);
                 // const _id = allClasses.map(item => item._id)
                 const _id = selectClass.map(item => item.classId)
-                
+
                 console.log(_id);
                 const payment = {
                     email: user?.email,
@@ -105,7 +105,7 @@ const CheckoutForm = ({ price, selectClass }) => {
                     date: new Date(),
                     status: 'pending'
                 }
-                fetch('https://summer-camp-client.vercel.app/payment', {
+                fetch('https://summer-camp-server-sandy-phi.vercel.app/payment', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -119,16 +119,16 @@ const CheckoutForm = ({ price, selectClass }) => {
                             // display something
                         }
                     })
-                    fetch(`https://summer-camp-client.vercel.app/class/${_id}`, {
-                        method: 'PUT',
-                        headers: {
-                            'content-type': 'application/json'
-                        },
-                        body: JSON.stringify(restSeats)
-                    })
+                fetch(`https://summer-camp-server-sandy-phi.vercel.app/class/${_id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(restSeats)
+                })
                     .then(res => res.json())
                     .then(data => {
-                        if(data.modifiedCount > 0){
+                        if (data.modifiedCount > 0) {
                             // display something
                         }
                     })
@@ -146,14 +146,14 @@ const CheckoutForm = ({ price, selectClass }) => {
                     options={{
                         style: {
                             base: {
-                                fontSize: "16px",
-                                color: "#424770",
-                                "::placeholder": {
-                                    color: "#aab7c4",
+                                fontSize: '16px',
+                                color: '#424770',
+                                '::placeholder': {
+                                    color: '#aab7c4',
                                 },
                             },
                             invalid: {
-                                color: "#9e2146",
+                                color: '#9e2146',
                             },
                         },
                     }}

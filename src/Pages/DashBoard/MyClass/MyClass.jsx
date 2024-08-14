@@ -1,14 +1,15 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import MyClassCard from "./MyClassCard";
-import SectionTitle from "../../../component/SectionTitle";
+import SectionTitle from "../../../component/SectionTitle/SectionTitle";
+
 
 
 const MyClass = () => {
     const [classes, setClasses] = useState([]);
     const { user } = useContext(AuthContext);
     useEffect(() => {
-        fetch(`https://summer-camp-client.vercel.app/addClass?email=${user?.email}`)
+        fetch(`https://summer-camp-server-sandy-phi.vercel.app/addClass?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setClasses(data))
     }, [user])

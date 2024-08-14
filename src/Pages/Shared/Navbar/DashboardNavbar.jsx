@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
-import logo from '../../../assets/logo/music-player.png'
-import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../../Provider/AuthProvider";
-// import useAdmin from "../../../component/useAdmin";
+import logo from '../../../assets/logo/music.png'
+import { useEffect, useState } from "react";
+import useAuth from "../../../hooks/useAuth";
 
 const DashboardNavbar = () => {
-    const { user, logOut } = useContext(AuthContext);
-    // const [isAdmin] = useAdmin();
-    //  logOut
+    const { user, logOut } = useAuth()
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -34,7 +31,7 @@ const DashboardNavbar = () => {
     return (
         <div className="navbar bg-base-200 lg:ps-10 lg:pe-20 px-5">
             <div className="flex-1 gap-2 items-center">
-                <Link className="btn btn-ghost normal-case text-xl">
+                <Link to='/' className="btn btn-ghost normal-case text-xl">
                     <img className="w-10" src={logo} alt="" />
                     <p>Musicine</p>
                 </Link>

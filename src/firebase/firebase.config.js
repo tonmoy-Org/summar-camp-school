@@ -5,12 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_apiKey,
-  authDomain: import.meta.env.VITE_authDomain,
-  projectId: import.meta.env.VITE_projectId,
-  storageBucket: import.meta.env.VITE_storageBucket,
-  messagingSenderId: import.meta.env.VITE_messagingSenderId,
-  appId: import.meta.env.VITE_appId,
+  apiKey: "AIzaSyBbeEYU_msqHNGTDw_BKJRmAFV2t7W3zXw",
+  authDomain: "musicine-org.firebaseapp.com",
+  databaseURL: "https://musicine-org-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "musicine-org",
+  storageBucket: "musicine-org.appspot.com",
+  messagingSenderId: "556574544235",
+  appId: "1:556574544235:web:5dca8b0109d3fb4d827c2e"
 };
 
 // Initialize Firebase

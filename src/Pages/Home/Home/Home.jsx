@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <ClassesSection></ClassesSection>
-            <div className='max-w-screen-xl mx-auto'>
+            <div className='max-w-screen-lg mx-auto'>
                 <InstructorSection></InstructorSection>
                 <Program></Program>
             </div>

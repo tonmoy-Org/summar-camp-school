@@ -1,4 +1,4 @@
-import SectionTitle from "../../component/SectionTitle";
+import SectionTitle from "../../component/SectionTitle/SectionTitle";
 import useClass from "../../hooks/useClass";
 import ClassCard from "./ClassCard";
 
@@ -6,9 +6,9 @@ import ClassCard from "./ClassCard";
 const AllClass = () => {
     const [allClasses] = useClass();
     return (
-        <div className="max-w-screen-xl mx-auto py-28">
+        <div className="max-w-screen-lg mx-auto lg:py-16">
             <SectionTitle subHeading='OUR CLASS' heading='Our Music Class'></SectionTitle>
-            <div className="lg:w-11/12 grid lg:grid-cols-3 gap-6 mx-auto">
+            <div className="grid lg:grid-cols-3 gap-5">
                 {
                     allClasses.map(classes =>
                         <ClassCard

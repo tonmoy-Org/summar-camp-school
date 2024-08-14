@@ -1,4 +1,4 @@
-import SectionTitle from "../../component/SectionTitle";
+import SectionTitle from "../../component/SectionTitle/SectionTitle";
 import useInstructorLoader from "../../hooks/useInstructorLoader";
 import InstructorCard from "./InstructorCard";
 
@@ -6,9 +6,9 @@ import InstructorCard from "./InstructorCard";
 const Instructors = () => {
     const [instructors] = useInstructorLoader()
     return (
-        <div className='max-w-screen-xl mx-auto py-28'>
+        <div className='max-w-screen-lg mx-auto lg:py-16'>
                 <SectionTitle subHeading='OUR TEACHERS' heading='Meet Our Instructor'></SectionTitle>
-                <div className="lg:w-11/12 grid lg:grid-cols-3 gap-8 mx-auto">
+                <div className="grid lg:grid-cols-3 gap-5 mx-auto">
                     {
                         instructors.map(instructor =>
                             <InstructorCard

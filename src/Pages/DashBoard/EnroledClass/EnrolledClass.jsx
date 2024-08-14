@@ -1,27 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
-import SectionTitle from "../../../component/SectionTitle";
+
 import EnrolledTable from "./EnrolledTable";
+import SectionTitle from "../../../component/SectionTitle/SectionTitle";
 
 const EnrolledClass = () => {
     const { user } = useContext(AuthContext);
     const [sortField, setSortField] = useState("date");
     const [sortOrder, setSortOrder] = useState("asc");
-    const { data: enrolledClass = [], refetch } = useQuery(
-        ["enrolledClass", sortField, sortOrder],
-        async () => {
-            const res = await fetch(
-                `https://summer-camp-client.vercel.app/enrolledClass/sort?email=${user?.email}&sortField=${sortField}&sortOrder=${sortOrder}`
-            );
+
+    const { data: enrolledClass = [] } = useQuery({
+        queryKey: ['enrolledClass'],
+        queryFn: async () => {
+            const res = await fetch(`/enrolledClass/sort?email=${user?.email}&sortField=${sortField}&sortOrder=${sortOrder}`);
             return res.json();
         }
-    );
-
-    useEffect(() => {
-        // Refetch the data when the sorting parameters change
-        refetch();
-    }, [sortField, sortOrder]);
+    });
 
     const handleSortChange = (event) => {
         const value = event.target.value;

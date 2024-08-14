@@ -1,15 +1,15 @@
-import SectionTitle from '../../../component/SectionTitle';
 import InstructorSectionCard from './InstructorSectionCard';
 import useInstructorLoader from '../../../hooks/useInstructorLoader';
+import SectionTitle from '../../../component/SectionTitle/SectionTitle';
 
 const InstructorSection = () => {
   const [instructors] = useInstructorLoader();
-  const slicedInstructors = instructors.slice(0, 6); // Slice the first 6 items
+  const slicedInstructors = instructors.slice(0, 6);
   
   return (
-    <div className='lg:mx-1 mx-6 py-28'>
+    <div className=''>
       <SectionTitle subHeading='OUR TEACHERS' heading='Popular Instructors ' />
-      <div className='grid lg:grid-cols-4 gap-6'>
+      <div className='grid lg:grid-cols-3 gap-5'>
         {slicedInstructors.map(instructor => (
           <InstructorSectionCard
             key={instructor._id}

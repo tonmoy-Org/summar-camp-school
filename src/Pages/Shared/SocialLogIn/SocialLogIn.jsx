@@ -1,8 +1,9 @@
 import { FacebookAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import app from "../../../firebase/firebase.config";
 import google from '../../../assets/logo/google.jpg'
 import facebook from '../../../assets/logo/fb.png'
 import { useLocation, useNavigate } from "react-router-dom";
+import app from "../../../firebase/firebase.config";
+
 
 const SocialLogIn = () => {
     const auth = getAuth(app);
@@ -20,7 +21,7 @@ const SocialLogIn = () => {
                 const newUser = result.user;
                 console.log(newUser);
                 const saveUser = { name: newUser.displayName, email: newUser.email }
-                fetch('https://summer-camp-client.vercel.app/users', {
+                fetch('https://summer-camp-server-sandy-phi.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -43,7 +44,7 @@ const SocialLogIn = () => {
                 const loggedUserFacebook = result.user;
                 console.log(loggedUserFacebook);
                 const saveUser = { name: loggedUserFacebook.displayName, email: loggedUserFacebook.email }
-                fetch('https://summer-camp-client.vercel.app/users', {
+                fetch('https://summer-camp-server-sandy-phi.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -60,10 +61,21 @@ const SocialLogIn = () => {
             })
     }
     return (
-        <div className="text-center mb-5">
-            <button onClick={handleGoogleLogin} className="mr-6 transform transition duration-300 ease hover:-translate-y-1 hover:scale-95"><img className="w-10 mx-auto rounded-full" src={google} alt="" /></button>
-            <button onClick={handleFacebookLogin} className="transform transition duration-300 ease hover:-translate-y-1 hover:scale-95"><img className="w-10 mx-auto rounded-full" src={facebook} alt="" /></button>
+        <div className="mb-5">
+            <div>
+                <button onClick={handleGoogleLogin} className="flex items-center gap-4 justify-center border-2 px-28 py-2 border-gray-300 rounded-sm">
+                    <img className="w-8 h-8 rounded-full" src={google} alt="" />
+                    <p className="text-base">Google</p>
+                </button>
+            </div>
+            <div className="mt-3">
+                <button onClick={handleFacebookLogin} className="flex items-center gap-4 justify-center border-2 px-28 py-2 border-gray-300 rounded-sm">
+                    <img className="w-8 h-8 rounded-full" src={facebook} alt="" />
+                    <p className="text-base">Facebook</p>
+                </button>
+            </div>
         </div>
+
     );
 };
 

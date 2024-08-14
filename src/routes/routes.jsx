@@ -21,6 +21,7 @@ import EnrolledClass from "../Pages/DashBoard/EnroledClass/EnrolledClass";
 import InstructorRoute from "./InstructorRoute";
 import AdminHome from "../Pages/DashBoard/AdminHome/AdminHome";
 import RecentPayment from "../Pages/DashBoard/RecentPayment/RecentPayment";
+import ContactPage from "../Pages/ContactPage/ContactPage";
 
 
 
@@ -49,6 +50,10 @@ import RecentPayment from "../Pages/DashBoard/RecentPayment/RecentPayment";
         {
           path: 'allClass',
           element: <AllClass></AllClass>
+        },
+        {
+          path: 'contact',
+          element: <ContactPage></ContactPage>
         }
       ]
     },

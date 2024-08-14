@@ -44,7 +44,7 @@ const Banner = () => {
                             SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
                             Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
-                        <button className="btn">info & Tickets</button>
+                        <button className="btn bg-[#D99904] text-white rounded-sm hover:text-black">info & Tickets</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -56,7 +56,7 @@ const Banner = () => {
                             SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
                             Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
-                        <button className="btn">info & Tickets</button>
+                        <button className="btn bg-[#D99904] text-white rounded-sm hover:text-black">info & Tickets</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -68,7 +68,7 @@ const Banner = () => {
                             SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
                             Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
-                        <button className="btn">info & Tickets</button>
+                        <button className="btn bg-[#D99904] text-white rounded-sm hover:text-black">info & Tickets</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -80,7 +80,7 @@ const Banner = () => {
                             SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
                             Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
-                        <button className="btn">info & Tickets</button>
+                        <button className="btn bg-[#D99904] text-white rounded-sm hover:text-black">info & Tickets</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -92,7 +92,7 @@ const Banner = () => {
                             SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
                             Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
-                        <button className="btn">info & Tickets</button>
+                        <button className="btn bg-[#D99904] text-white rounded-sm hover:text-black">info & Tickets</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -104,7 +104,7 @@ const Banner = () => {
                             SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
                             Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
-                        <button className="btn">info & Tickets</button>
+                        <button className="btn bg-[#D99904] text-white rounded-sm hover:text-black">info & Tickets</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -116,7 +116,7 @@ const Banner = () => {
                             SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
                             Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
-                        <button className="btn">info & Tickets</button>
+                        <button className="btn bg-[#D99904] text-white rounded-sm hover:text-black">info & Tickets</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -128,7 +128,7 @@ const Banner = () => {
                             SPECIAL MUSIC SCHOOL HIGH SCHOOL CONCERTO COMPETITION WINNERS’ CONCERT
                             Sunday | June 11, 2023 | 6:30 pm</p>
                         <br />
-                        <button className="btn">info & Tickets</button>
+                        <button className="btn bg-[#D99904] text-white rounded-sm hover:text-black">info & Tickets</button>
                     </div>
                 </SwiperSlide>
             </Swiper>

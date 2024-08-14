@@ -1,15 +1,11 @@
-import SectionTitle from "../../../component/SectionTitle";
 import StudentCart from "./StudentCart";
 import useSelectedClasses from "../../../hooks/useSelectedClasses";
+import SectionTitle from "../../../component/SectionTitle/SectionTitle";
 
 
 const StudentClass = () => {
     const [selectClass, refetch] = useSelectedClasses();
 
-    // const handleSSLCommerz = (selectClass) =>{
-    //     console.log(selectClass);
-
-    // }
     refetch();
     return (
         <div>

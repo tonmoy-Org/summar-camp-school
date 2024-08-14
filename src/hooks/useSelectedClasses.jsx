@@ -1,13 +1,17 @@
-import { useContext } from "react";
-import { AuthContext } from "../Provider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
+import useAxios from "./useAxios";
+import useAuth from "./useAuth";
 
 
 const useSelectedClasses = () => {
-    const { user } = useContext(AuthContext);
-    const { data: selectClass = [], refetch } = useQuery(['selectClass'], async () => {
-        const res = await fetch(`https://summer-camp-client.vercel.app/selectClass?email=${user?.email}`); // Replace with the correct URL for fetching user data
-        return res.json();
+    const [axiosSecure] = useAxios();
+    const { user } = useAuth();
+    const { data: selectClass = [], refetch } = useQuery({
+        queryKey: ['selectClass'],
+        queryFn: async () => {
+            const res = await axiosSecure.get(`/selectClass?email=${user?.email}`);
+            return res.data;
+        },
     });
 
     return [selectClass, refetch];

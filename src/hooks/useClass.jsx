@@ -1,10 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
+import useAxios from "./useAxios";
 
 
 const useClass = () => {
-    const { data: classes = [], refetch } = useQuery(['classes'], async () => {
-        const res = await fetch(`https://summer-camp-client.vercel.app/class`); // Replace with the correct URL for fetching user data
-        return res.json();
+    const [axiosSecure] = useAxios();
+    const { data: classes = [], refetch } = useQuery({
+        queryKey: ['class'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/class');
+            return res.data;
+        },
     });
 
     return [classes, refetch];

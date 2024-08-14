@@ -11,9 +11,9 @@ const ClassCard = ({ classes }) => {
   const handleSelect = (classes) => {
     console.log(classes);
     const selectClass = { classId: _id, name, image, price, instructorName, availableSeats, enrolled, email: user?.email, userName: user?.displayName };
-    setButtonDisabled(true); // Disable the button after it's clicked
+    setButtonDisabled(true);
 
-    fetch('https://summer-camp-client.vercel.app/selectClass', {
+    fetch('https://summer-camp-server-sandy-phi.vercel.app/selectClass', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -32,9 +32,9 @@ const ClassCard = ({ classes }) => {
   };
 
   return (
-    <div className="lg:w-[370px] w-80 mx-auto bg-base-100 shadow-xl">
+    <div className="bg-base-100 shadow-xl">
       <figure>
-        <img src={image} alt={name} />
+        <img className="h-60 object-cover" src={image} alt={name} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
@@ -43,7 +43,7 @@ const ClassCard = ({ classes }) => {
         <p>Available Seats: {availableSeats}</p>
         <p>Enrolled: {enrolled}</p>
         <div className="card-actions justify-end">
-          {user === null ? <Link to='/login'><button className="btn btn-sm btn-primary">Selected</button> </Link> :
+          {user === null ? <Link to='/login'><button className="btn btn-sm bg-[#D99904] text-white rounded-sm hover:text-black">Selected</button> </Link> :
             <button className="btn btn-sm btn-primary" onClick={() => handleSelect(classes)} disabled={isButtonDisabled}>
               {isButtonDisabled ? 'Selected' : 'Select'}
             </button>

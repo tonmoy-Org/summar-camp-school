@@ -1,8 +1,8 @@
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
-import SectionTitle from "../../../component/SectionTitle";
 import useSelectedClasses from "../../../hooks/useSelectedClasses";
+import SectionTitle from "../../../component/SectionTitle/SectionTitle";
 
 const stripePromise = loadStripe(import.meta.env.VITE_Stripe_Pk);
 const Payment = () => {
